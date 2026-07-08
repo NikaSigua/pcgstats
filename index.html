@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>25 Years of Peace Corps Georgia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#00205B;--red:#BA0C2F;--aqua:#079AAF;--lime:#81AF40;--green:#008375;--purple:#643795;
+--pearl:#E8E5E2;--pewter:#BFC0BF;--gray:#545164;--orange:#EC6124;--turq:#4197CB;--brown:#6E561C;
+--ink:#E8E5E2;--muted:#BFC0BF;
+--students:7,154,175;--adults:129,175,64;--organizations:236,97,36;--volunteers:100,55,149;
+--font:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
+*{box-sizing:border-box;font-family:var(--font);-webkit-font-smoothing:antialiased}
+body{margin:0;min-height:100vh;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:26px;
+background:#ffffff;position:relative;overflow:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+background:radial-gradient(720px 460px at 84% -12%,rgba(7,154,175,.12),transparent 60%),
+radial-gradient(620px 460px at 4% 112%,rgba(65,151,203,.12),transparent 60%)}
+.stage{position:relative;z-index:1;width:min(1040px,96vw);
+background:linear-gradient(160deg,rgba(0,32,91,.97),rgba(0,32,91,.9));
+border:1px solid rgba(255,255,255,.14);border-radius:24px;padding:30px 38px 22px;
+box-shadow:0 34px 90px rgba(0,32,91,.42),inset 0 1px 0 rgba(255,255,255,.14);
+backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.header{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:26px}
+.kicker{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--aqua);font-weight:700;margin-bottom:8px}
+h1{margin:0;font-size:27px;font-weight:700;letter-spacing:-.01em;color:var(--ink);line-height:1.05}
+h1 .accent{color:var(--red)}
+.yearbox{text-align:right;flex:none}
+.year{font-size:64px;font-weight:800;line-height:.86;letter-spacing:-.02em;color:var(--ink);
+font-variant-numeric:tabular-nums;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
+.year.pulse{transform:scale(1.06)}
+.year .fyx{font-size:.5em;font-weight:600;color:var(--muted);letter-spacing:.02em;margin-right:3px}
+.flag{font-size:12px;color:var(--orange);margin-top:8px;min-height:15px;max-width:250px;font-weight:600}
+.chart{position:relative;height:392px;margin-bottom:4px}
+.row{position:absolute;left:0;right:0;height:92px}
+.rowhead{display:flex;justify-content:space-between;align-items:baseline;margin:0 2px 8px}
+.name{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.num{font-size:26px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.track{position:relative;height:38px;background:rgba(232,229,226,.09);border-radius:12px;overflow:hidden;
+box-shadow:inset 0 1px 2px rgba(0,8,32,.35)}
+.fill{position:absolute;left:0;top:0;bottom:0;border-radius:12px;transition:width .16s linear}
+.ufill{position:absolute;left:0;top:0;bottom:0;border-radius:12px 0 0 12px;transition:width .16s linear;
+border-right:2px solid #ffffff}
+.ulabel{position:absolute;top:50%;transform:translateY(-50%);font-size:12px;font-weight:800;color:var(--ink);
+white-space:nowrap;font-variant-numeric:tabular-nums;transition:left .16s linear}
+@media (prefers-reduced-motion:reduce){.fill,.ufill,.ulabel{transition:none}.year{transition:none}}
+.timeline{margin:14px 2px 2px}
+.scrub{-webkit-appearance:none;appearance:none;width:100%;height:6px;border-radius:99px;
+background:rgba(232,229,226,.16);cursor:pointer;outline:none}
+.scrub::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+background:#ffffff;border:3px solid var(--aqua);box-shadow:0 2px 6px rgba(0,32,91,.25);cursor:pointer}
+.scrub::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:3px solid var(--aqua);cursor:pointer}
+.ticks{display:flex;justify-content:space-between;color:var(--muted);font-size:10.5px;margin-top:8px;
+letter-spacing:.08em;font-variant-numeric:tabular-nums}
+.controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:16px;
+border-top:1px solid rgba(232,229,226,.14);padding-top:16px}
+button{background:rgba(232,229,226,.08);color:var(--ink);border:1px solid rgba(232,229,226,.2);
+border-radius:11px;padding:9px 15px;font-size:13.5px;font-weight:700;cursor:pointer;transition:background .18s,transform .08s}
+button:hover{background:rgba(232,229,226,.16)}button:active{transform:scale(.96)}
+button.primary{background:var(--red);color:#fff;border:none;min-width:112px;box-shadow:0 6px 16px rgba(186,12,47,.3)}
+button.primary:hover{filter:brightness(1.06)}
+button:focus-visible,.scrub:focus-visible{outline:3px solid var(--aqua);outline-offset:3px}
+.spacer{flex:1}
+label{color:var(--muted);font-size:12.5px;display:flex;align-items:center;gap:9px;font-weight:600}
+label input[type=range]{accent-color:var(--aqua)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+</style></head><body>
+<div class="stage" role="group" aria-label="Peace Corps Georgia cumulative impact animation">
+<div class="header">
+ <div><div class="kicker">Cumulative Impact · FY2005–FY2025</div>
+ <h1>25 Years of <span class="accent">Peace Corps Georgia</span></h1></div>
+ <div class="yearbox"><div class="year" id="year"><span class="fyx">FY</span><span id="yv">05</span></div>
+ <div class="flag" id="flag"></div></div>
+</div>
+<div class="chart" id="chart"></div>
+<div class="timeline">
+ <input class="scrub" id="scrub" type="range" min="0" max="20" step="0.01" value="0" aria-label="Timeline year">
+ <div class="ticks"><span>2005</span><span>2010</span><span>2015</span><span>2020</span><span>2025</span></div>
+</div>
+<div class="controls">
+<button class="primary" id="play" aria-label="Play or pause">▶ Play</button>
+<button id="prev" aria-label="Previous year" title="Previous year (←)">◀</button>
+<button id="next" aria-label="Next year" title="Next year (→)">▶</button>
+<button id="restart" aria-label="Restart from 2005">↻ Restart</button>
+<div class="spacer"></div>
+<label>Speed <input type="range" id="speed" min="0.5" max="3" step="0.5" value="1" aria-label="Playback speed"></label>
+</div>
+<div class="sr" id="live" aria-live="polite"></div>
+</div>
+<script>
+const DATA=[{"year": 2005, "students": 9240, "adults": 1035, "organizations": 90, "volunteers": 130}, {"year": 2006, "students": 16490, "adults": 5265, "organizations": 160, "volunteers": 175}, {"year": 2007, "students": 20450.0, "adults": 6012.0, "organizations": 223.0, "volunteers": 220}, {"year": 2008, "students": 23683.0, "adults": 6924.0, "organizations": 300.0, "volunteers": 270}, {"year": 2009, "students": 23683.0, "adults": 6924.0, "organizations": 300.0, "volunteers": 295}, {"year": 2010, "students": 25852.0, "adults": 7427.0, "organizations": 355.0, "volunteers": 350}, {"year": 2011, "students": 30070.0, "adults": 8043.0, "organizations": 408.0, "volunteers": 395}, {"year": 2012, "students": 30070.0, "adults": 8043.0, "organizations": 408.0, "volunteers": 434}, {"year": 2013, "students": 41617.0, "adults": 9691.0, "organizations": 642.0, "volunteers": 500}, {"year": 2014, "students": 53814.0, "adults": 10501.0, "organizations": 764.0, "volunteers": 580}, {"year": 2015, "students": 67582.0, "adults": 13233.0, "organizations": 872.0, "volunteers": 615}, {"year": 2016, "students": 76668.0, "adults": 14833.0, "organizations": 949.0, "volunteers": 650}, {"year": 2017, "students": 84273.0, "adults": 16450.0, "organizations": 989.0, "volunteers": 700}, {"year": 2018, "students": 94990.0, "adults": 17932.0, "organizations": 1031.0, "volunteers": 820}, {"year": 2019, "students": 102274.0, "adults": 19442.0, "organizations": 1106.0, "volunteers": 900}, {"year": 2020, "students": 106833.0, "adults": 19972.0, "organizations": 1140.0, "volunteers": 950}, {"year": 2021, "students": 106833.0, "adults": 19972.0, "organizations": 1151.0, "volunteers": 950}, {"year": 2022, "students": 106833.0, "adults": 19972.0, "organizations": 1151.0, "volunteers": 950}, {"year": 2023, "students": 107613.0, "adults": 19982.0, "organizations": 1153.0, "volunteers": 975}, {"year": 2024, "students": 109248.0, "adults": 20093.0, "organizations": 1172.0, "volunteers": 1015}, {"year": 2025, "students": 113992.0, "adults": 20426.0, "organizations": 1223.0, "volunteers": 1060}],NOTES={"2009": "Program suspended \u2014 2008 war", "2021": "COVID \u2014 suspended", "2022": "COVID \u2014 suspended"},UNIQ=578;
+const SER=[["students","Students reached","--students"],["adults","Adults reached","--adults"],
+["organizations","Organizations","--organizations"],["volunteers","Volunteers","--volunteers"]];
+const finals={};SER.forEach(s=>finals[s[0]]=DATA[DATA.length-1][s[0]]);
+const URATIO=UNIQ/finals.organizations;
+const chart=document.getElementById('chart');const css=getComputedStyle(document.documentElement);
+const rows={};const LAST=DATA.length-1;
+SER.forEach((s,idx)=>{const rgb=css.getPropertyValue(s[2]).trim();
+const el=document.createElement('div');el.className='row';el.style.top=(idx*96)+'px';
+const hd=document.createElement('div');hd.className='rowhead';
+const nm=document.createElement('div');nm.className='name';nm.textContent=s[1];
+const num=document.createElement('div');num.className='num';
+hd.appendChild(nm);hd.appendChild(num);
+const tr=document.createElement('div');tr.className='track';
+const fl=document.createElement('div');fl.className='fill';
+const isOrg=s[0]==='organizations';
+fl.style.background=isOrg?`linear-gradient(90deg,rgba(${rgb},.30),rgba(${rgb},.55))`
+                         :`linear-gradient(90deg,rgba(${rgb},.55),rgb(${rgb}))`;
+fl.style.boxShadow=`0 2px 12px rgba(${rgb},.28)`;
+tr.appendChild(fl);
+let uf=null,ul=null;
+if(isOrg){uf=document.createElement('div');uf.className='ufill';
+ uf.style.background=`rgb(${rgb})`;
+ ul=document.createElement('div');ul.className='ulabel';
+ tr.appendChild(uf);tr.appendChild(ul);}
+el.appendChild(hd);el.appendChild(tr);chart.appendChild(el);
+rows[s[0]]={fl,num,uf,ul};});
+let playing=false,t=0,speed=1,last=null,lastYr=null;const DUR=750;
+const $=id=>document.getElementById(id);
+function fmt(n){return Math.round(n).toLocaleString();}
+function lerp(a,b,u){return a+(b-a)*u;}
+function setPlay(p){playing=p;$('play').textContent=p?'❚❚ Pause':'▶ Play';}
+function render(){
+const i0=Math.floor(t),i1=Math.min(i0+1,LAST),u=t-i0,d0=DATA[i0],d1=DATA[i1];
+const yr=Math.round(lerp(d0.year,d1.year,u));
+$('yv').textContent=String(yr).slice(2);
+if(yr!==lastYr){lastYr=yr;const ye=$('year');ye.classList.remove('pulse');void ye.offsetWidth;ye.classList.add('pulse');}
+$('flag').textContent=NOTES[yr]||'';
+const W=chart.clientWidth;
+SER.forEach(s=>{const cur=lerp(d0[s[0]],d1[s[0]],u);const r=rows[s[0]];
+ const fw=Math.max(4,(cur/finals[s[0]])*W);
+ r.fl.style.width=fw+'px';r.num.textContent=fmt(cur);
+ if(r.uf){const uw=Math.max(2,(cur*URATIO/finals[s[0]])*W);
+  r.uf.style.width=uw+'px';r.ul.textContent=fmt(cur*URATIO)+' unique';
+  r.ul.style.left=(uw+8)+'px';}
+});
+$('scrub').value=t;
+}
+function announce(){const d=DATA[Math.round(t)];
+ $('live').textContent=`FY${String(d.year).slice(2)}: students ${fmt(d.students)}, adults ${fmt(d.adults)}, organizations ${fmt(d.organizations)} total and ${fmt(d.organizations*URATIO)} unique, Volunteers ${fmt(d.volunteers)}`;}
+function step(dir){setPlay(false);t=Math.max(0,Math.min(LAST,Math.round(t)+dir));render();announce();}
+$('play').onclick=function(){if(t>=LAST)t=0;setPlay(!playing);last=null;};
+$('prev').onclick=()=>step(-1);$('next').onclick=()=>step(1);
+$('restart').onclick=function(){t=0;setPlay(false);render();};
+$('speed').oninput=function(){speed=+this.value;};
+$('scrub').oninput=function(){setPlay(false);t=+this.value;render();};
+document.addEventListener('keydown',function(e){
+ if(e.code==='Space'){e.preventDefault();if(t>=LAST)t=0;setPlay(!playing);last=null;}
+ else if(e.code==='ArrowRight'){e.preventDefault();step(1);}
+ else if(e.code==='ArrowLeft'){e.preventDefault();step(-1);}});
+function loop(ts){if(last==null)last=ts;const dt=(ts-last)*speed;last=ts;
+ if(playing){t+=dt/DUR;if(t>=LAST){t=LAST;setPlay(false);announce();}}
+ render();requestAnimationFrame(loop);}
+render();requestAnimationFrame(loop);
+</script></body></html>
