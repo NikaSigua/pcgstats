@@ -115,7 +115,7 @@ el.appendChild(hd);el.appendChild(tr);chart.appendChild(el);
 rows[s[0]]={fl,num,uf,ul};});
 let playing=false,t=0,speed=1,last=null,lastYr=null;const DUR=750;
 const $=id=>document.getElementById(id);
-function fmt(n){return Math.round(n).toLocaleString();}
+function fmt(n){return Math.round(n).toLocaleString()+'+';}
 function lerp(a,b,u){return a+(b-a)*u;}
 function setPlay(p){playing=p;$('play').textContent=p?'❚❚ Pause':'▶ Play';}
 function render(){
