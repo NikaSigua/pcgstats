@@ -9,8 +9,8 @@
 --students:7,154,175;--adults:129,175,64;--organizations:236,97,36;--volunteers:100,55,149;
 --font:'Figtree',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;}
 *{box-sizing:border-box;font-family:var(--font);-webkit-font-smoothing:antialiased}
-body{margin:0;min-height:100vh;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:26px;
-background:#ffffff;position:relative;overflow:hidden}
+body{margin:0;min-height:100dvh;color:var(--ink);display:flex;align-items:center;justify-content:center;padding:24px;
+background:#ffffff;position:relative}
 body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
 background:radial-gradient(720px 460px at 84% -12%,rgba(7,154,175,.12),transparent 60%),
 radial-gradient(620px 460px at 4% 112%,rgba(65,151,203,.12),transparent 60%)}
@@ -28,8 +28,8 @@ h1 .accent{color:var(--red)}
 font-variant-numeric:tabular-nums;transition:transform .25s cubic-bezier(.34,1.56,.64,1)}
 .year.pulse{transform:scale(1.06)}
 .flag{font-size:12px;line-height:1.35;color:var(--orange);margin-top:8px;height:33px;max-width:250px;font-weight:600;overflow:hidden}
-.chart{position:relative;height:392px;margin-bottom:4px}
-.row{position:absolute;left:0;right:0;height:92px}
+.chart{position:relative;display:flex;flex-direction:column;gap:14px;margin-bottom:4px}
+.row{position:relative}
 .rowhead{display:flex;justify-content:space-between;align-items:baseline;margin:0 2px 8px}
 .name{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:700}
 .num{font-size:26px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums;letter-spacing:-.01em}
@@ -61,6 +61,23 @@ button:focus-visible,.scrub:focus-visible{outline:3px solid var(--aqua);outline-
 label{color:var(--muted);font-size:12.5px;display:flex;align-items:center;gap:9px;font-weight:600}
 label input[type=range]{accent-color:var(--aqua)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media (max-height:760px){body{align-items:flex-start}}
+@media (max-width:600px){
+ body{padding:12px}
+ .stage{padding:22px 16px 16px;border-radius:18px}
+ .header{margin-bottom:16px;gap:12px}
+ h1{font-size:23px}
+ .kicker{font-size:10.5px;letter-spacing:.16em}
+ .year{font-size:44px}
+ .num{font-size:20px}
+ .name{font-size:10px;letter-spacing:.12em}
+ .chart{gap:11px}
+ .track{height:32px}
+ .controls{gap:7px;padding-top:13px;margin-top:13px}
+ button{padding:8px 11px;font-size:12.5px}
+ button.primary{min-width:92px}
+ label{font-size:11.5px}
+}
 </style></head><body>
 <div class="stage" role="group" aria-label="Peace Corps Georgia cumulative impact animation">
 <div class="header">
@@ -93,7 +110,7 @@ const URATIO=UNIQ/finals.organizations;
 const chart=document.getElementById('chart');const css=getComputedStyle(document.documentElement);
 const rows={};const LAST=DATA.length-1;
 SER.forEach((s,idx)=>{const rgb=css.getPropertyValue(s[2]).trim();
-const el=document.createElement('div');el.className='row';el.style.top=(idx*96)+'px';
+const el=document.createElement('div');el.className='row';
 const hd=document.createElement('div');hd.className='rowhead';
 const nm=document.createElement('div');nm.className='name';nm.textContent=s[1];
 const num=document.createElement('div');num.className='num';
